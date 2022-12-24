@@ -11,3 +11,11 @@ html {
 	margin: 0;
 	padding: 0;
 }
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right bottom, #e4a7db, #d234db, #a22dce, #7d3ac5, #4d56bd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
