@@ -14,4 +14,19 @@ const clearButton = document.querySelector('.clear');
 
 const calculatorHistory = document.querySelector('.history');
 
-const historyBtn = document.querySelector('.history-btn')
+const historyBtn = document.querySelector('.history-btn');
+
+let result = '';
+
+// Liseners
+operatorsButtons.forEach((button) => button.addEventListener('click', operate));
+
+equalsButton.addEventListener('click', showResults);
+
+clearButton.addEventListener('click', clearScreen);
+
+numbersButtons.forEach((button) => {
+	button.addEventListener('click', displayNumbers);
+});
+
+historyBtn.addEventListener('click', clearHistory);
