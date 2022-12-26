@@ -84,7 +84,12 @@ function addToHistory() {
 	calculatorHistory.appendChild(newHistoryItem);
 }
 
-function clearScreen() {}
+function clearScreen() {
+	result = '';
+	currentNumber.innerHTML = '';
+	previusNumber.innerHTML = '';
+	mathSihg.innerHTML = '';
+}
 
 function clearHistory() {}
 
