@@ -43,7 +43,46 @@ function operate() {
 	currentNumber.innerHTML = '';
 }
 
-function showResults() {}
+function showResults() {
+	if (previusNumber.innerHTML === '' || currentNumber.innerHTML === '') {
+		return;
+	}
+
+	let a = Number(previusNumber.innerHTML);
+	let b = Number(currentNumber.innerHTML);
+	let operator = mathSihg.innerHTML;
+
+	switch (operator) {
+		case '+':
+			result = a + b;
+			break;
+		case '-':
+			result = a - b;
+			break;
+		case 'x':
+			result = a * b;
+			break;
+		case ':':
+			result = a / b;
+			break;
+		case '^2':
+			result = b ** a;
+			break;
+	}
+
+	addToHistory();
+	historyBtn.classList.add('active');
+	currentNumber.innerHTML = result;
+	previusNumber.innerHTML = '';
+	mathSihg.innerHTML = '';
+}
+
+function addToHistory() {
+	const newHistoryItem = document.createElement('li');
+	newHistoryItem.innerHTML = `${currentNumber.innerHTML}${mathSihg.innerHTML} ${previusNumber.innerHTML} = ${result}`;
+	newHistoryItem.classList.add('history-item');
+	calculatorHistory.appendChild(newHistoryItem);
+}
 
 function clearScreen() {}
 
