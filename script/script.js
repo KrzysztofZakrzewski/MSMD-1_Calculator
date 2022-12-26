@@ -91,7 +91,12 @@ function clearScreen() {
 	mathSihg.innerHTML = '';
 }
 
-function clearHistory() {}
+function clearHistory() {
+	calculatorHistory.textContent = '';
+	if (calculatorHistory.textContent === '') {
+		historyBtn.classList.remove('active');
+	}
+}
 
 // Liseners
 operatorsButtons.forEach((button) => button.addEventListener('click', operate));
