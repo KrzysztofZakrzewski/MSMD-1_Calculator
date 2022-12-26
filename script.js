@@ -16,6 +16,28 @@ const calculatorHistory = document.querySelector('.history');
 
 const historyBtn = document.querySelector('.history-btn');
 
+// functions
+
+function displayNumbers () {
+
+}
+
+function operate () {
+
+}
+
+function showResults () {
+
+}
+
+function clearScreen () {
+
+}
+
+function clearHistory () {
+    
+}
+
 let result = '';
 
 // Liseners
