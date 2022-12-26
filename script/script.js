@@ -1,4 +1,4 @@
-const currentNumber = document.querySelector('.currcurrentNumber');
+const currentNumber = document.querySelector('.currentNumber');
 
 const previusNumber = document.querySelector('.previusNumber p');
 
@@ -16,29 +16,24 @@ const calculatorHistory = document.querySelector('.history');
 
 const historyBtn = document.querySelector('.history-btn');
 
+let result = '';
 // functions
 
-function displayNumbers () {
+function displayNumbers() {
+	if (this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
+	if (this.textContent === '.' && currentNumber.innerHTML === '')
+		return (currentNumber.innerHTML = '.0');
 
+	currentNumber.innerHTML += this.textContent;
 }
 
-function operate () {
+function operate() {}
 
-}
+function showResults() {}
 
-function showResults () {
+function clearScreen() {}
 
-}
-
-function clearScreen () {
-
-}
-
-function clearHistory () {
-    
-}
-
-let result = '';
+function clearHistory() {}
 
 // Liseners
 operatorsButtons.forEach((button) => button.addEventListener('click', operate));
