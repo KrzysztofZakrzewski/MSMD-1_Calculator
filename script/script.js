@@ -27,7 +27,21 @@ function displayNumbers() {
 	currentNumber.innerHTML += this.textContent;
 }
 
-function operate() {}
+function operate() {
+	if (currentNumber.innerHTML === '' && this.textContent === '-') {
+		currentNumber.innerHTML = '-';
+	} else if (currentNumber.innerHTML === '') {
+		return;
+	}
+
+	if (mathSihg.innerHTML !== '') {
+		showResults();
+	}
+
+	previusNumber.innerHTML = currentNumber.innerHTML;
+	mathSihg.innerHTML = this.textContent;
+	currentNumber.innerHTML = '';
+}
 
 function showResults() {}
 
